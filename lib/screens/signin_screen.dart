@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../widgets/custom_button.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -24,10 +25,16 @@ class SignInScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Icon(
-                    Icons.local_drink,
-                    size: 32,
-                    color: Colors.green[300],
+                  SizedBox(
+                    width: 32,
+                    height: 32,
+                    child: SvgPicture.asset(
+                      'assets/icons/boba.svg',
+                      colorFilter: ColorFilter.mode(
+                        Colors.green[300]!,
+                        BlendMode.srcIn,
+                      ),
+                    ),
                   ),
                   Text(
                     'BA',

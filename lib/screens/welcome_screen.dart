@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../widgets/custom_button.dart';
 import 'signin_screen.dart';
 import 'signup_screen.dart';
+
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -34,10 +36,16 @@ class WelcomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Icon(
-                    Icons.local_drink,
-                    size: 40,
-                    color: Colors.green[300],
+                  SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: SvgPicture.asset(
+                      'assets/icons/boba.svg',
+                      colorFilter: ColorFilter.mode(
+                        Colors.green[300]!,
+                        BlendMode.srcIn,
+                      ),
+                    ),
                   ),
                   Text(
                     'BA',
